@@ -1,0 +1,71 @@
+Configuring cubicbezier-0.5.0.0...
+Building cubicbezier-0.5.0.0...
+Preprocessing library cubicbezier-0.5.0.0...
+[ 1 of 11] Compiling Math.BernsteinPoly ( Math/BernsteinPoly.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Math/BernsteinPoly.o )
+[ 2 of 11] Compiling Geom2D.CubicBezier.Numeric ( Geom2D/CubicBezier/Numeric.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Geom2D/CubicBezier/Numeric.o )
+
+Geom2D/CubicBezier/Numeric.hs:311:34: warning: [-Wname-shadowing]
+    This binding for ‘rows’ shadows the existing binding
+      imported from ‘Data.Matrix.Unboxed’ at Geom2D/CubicBezier/Numeric.hs:15:1-31
+      (and originally defined in ‘Data.Matrix.Generic’)
+
+Geom2D/CubicBezier/Numeric.hs:323:17: warning: [-Wname-shadowing]
+    This binding for ‘rows’ shadows the existing binding
+      imported from ‘Data.Matrix.Unboxed’ at Geom2D/CubicBezier/Numeric.hs:15:1-31
+      (and originally defined in ‘Data.Matrix.Generic’)
+[ 3 of 11] Compiling Geom2D           ( Geom2D.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Geom2D.o )
+
+Geom2D.hs:63:10: warning: [-Wmissing-methods]
+    • No explicit implementation for
+        ‘M.basicInitialize’
+    • In the instance declaration for ‘M.MVector V.MVector (Point a)’
+[ 4 of 11] Compiling Geom2D.CubicBezier.Basic ( Geom2D/CubicBezier/Basic.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Geom2D/CubicBezier/Basic.o )
+
+Geom2D/CubicBezier/Basic.hs:98:19: warning: [-Wname-shadowing]
+    This binding for ‘p’ shadows the existing binding
+      bound at Geom2D/CubicBezier/Basic.hs:95:33
+
+Geom2D/CubicBezier/Basic.hs:99:35: warning: [-Wname-shadowing]
+    This binding for ‘p’ shadows the existing binding
+      bound at Geom2D/CubicBezier/Basic.hs:95:33
+[ 5 of 11] Compiling Geom2D.CubicBezier.Approximate ( Geom2D/CubicBezier/Approximate.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Geom2D/CubicBezier/Approximate.o )
+[ 6 of 11] Compiling Geom2D.CubicBezier.Intersection ( Geom2D/CubicBezier/Intersection.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Geom2D/CubicBezier/Intersection.o )
+
+Geom2D/CubicBezier/Intersection.hs:11:1: warning: [-Wunused-imports]
+    The import of ‘Debug.Trace’ is redundant
+      except perhaps to import instances from ‘Debug.Trace’
+    To import instances alone, use: import Debug.Trace()
+
+Geom2D/CubicBezier/Intersection.hs:154:1: warning: [-Wmissing-signatures]
+    Top-level binding with no type signature: maxEps :: Double
+[ 7 of 11] Compiling Geom2D.CubicBezier.Curvature ( Geom2D/CubicBezier/Curvature.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Geom2D/CubicBezier/Curvature.o )
+[ 8 of 11] Compiling Geom2D.CubicBezier.MetaPath ( Geom2D/CubicBezier/MetaPath.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Geom2D/CubicBezier/MetaPath.o )
+[ 9 of 11] Compiling Geom2D.CubicBezier.Outline ( Geom2D/CubicBezier/Outline.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Geom2D/CubicBezier/Outline.o )
+[10 of 11] Compiling Geom2D.CubicBezier.Overlap ( Geom2D/CubicBezier/Overlap.lhs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Geom2D/CubicBezier/Overlap.o )
+
+Geom2D/CubicBezier/Overlap.lhs:321:3: warning: [-Wunused-top-binds]
+    Defined but not used: ‘belowLine’
+
+Geom2D/CubicBezier/Overlap.lhs:329:3: warning: [-Wunused-top-binds]
+    Defined but not used: ‘aboveLine’
+
+Geom2D/CubicBezier/Overlap.lhs:455:22: warning: [-Wname-shadowing]
+    This binding for ‘m’ shadows the existing binding
+      bound at Geom2D/CubicBezier/Overlap.lhs:451:15
+
+Geom2D/CubicBezier/Overlap.lhs:462:19: warning: [-Wname-shadowing]
+    This binding for ‘m’ shadows the existing binding
+      bound at Geom2D/CubicBezier/Overlap.lhs:451:15
+
+Geom2D/CubicBezier/Overlap.lhs:470:11: warning: [-Wname-shadowing]
+    This binding for ‘m’ shadows the existing binding
+      bound at Geom2D/CubicBezier/Overlap.lhs:451:15
+
+Geom2D/CubicBezier/Overlap.lhs:539:8: warning: [-Wunused-do-bind]
+    A do-notation statement discarded a result of type ‘Maybe ()’
+    Suppress this warning by saying
+      ‘_ <- mapM ((.) modify xStructAdd) c2’
+[11 of 11] Compiling Geom2D.CubicBezier ( Geom2D/CubicBezier.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Geom2D/CubicBezier.o )
+Installing library in
+/home/sid/.stack/snapshots/x86_64-linux/lts-8.9/8.0.2/lib/x86_64-linux-ghc-8.0.2/cubicbezier-0.5.0.0-1RQGQykKV2l7CwS3Dqr6mD
+Registering cubicbezier-0.5.0.0...
