@@ -1,7 +1,6 @@
 module BoardProps where
 
---We represent the board with a 1D array of n*n elements, where n is the size of the puzzle.
-type Board= Vector Int
+
 
 boardSize :: Board-> Int
 boardSize b = round ( sqrt ( fromIntegral ( Vector.length b ) ) )

@@ -1,4 +1,3 @@
-module Main where
 main = do
   putStrLn "Enter the name of the file containing the puzzle specification: "
   txt <- readFile =<< getLine
