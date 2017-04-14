@@ -34,6 +34,6 @@ solve s = go (PQ.fromList [(distKey s, s)])
 	        	Nothing -> neighbours state
 	        	Just n-> filter (\x -> board x /= board n) (neighbours state)
 
-	        keyStateMap = zip [moves q + dist q | q <- neighbourStates] neighbourStates
+	        keyStateMap = zip [moves q + distKey q | q <- neighbourStates] neighbourStates
 	        que2 = foldr (uncurry PQ.insert) que1 keyStateMap
 

@@ -1,4 +1,4 @@
-module IndexCovert where
+module IndexConvert where
 
 --A function that converts the indices of a 2D array to the corresponding indice in a 1D array
 two2one :: Int -> Int -> Int -> Int

@@ -1,4 +1,12 @@
 module AStarSearch where
+
+import Data.Vector (Vector, (!), (//))
+import qualified Data.Vector as Vector --Helps in simplified calling of functions
+import BoardProps
+import Data.Maybe (mapMaybe,fromMaybe)
+import IndexConvert 
+
+
 --What possible moves can take place from a given state
 data Move = U | D | L | R
 
@@ -15,8 +23,6 @@ data State = State { board		:: Board
 					,emptyTile 	:: Int
 					,moves		:: Int
 					,previous	:: Maybe State} deriving (Show,Eq,Ord)
-
-
 
 --A function to create a state from an array of tiles.
 createState :: [Int] -> State

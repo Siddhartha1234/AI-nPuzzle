@@ -1,7 +1,13 @@
 module BoardProps where
 
+import Data.Vector (Vector, (!), (//))
+import qualified Data.Vector as Vector --Helps in simplified calling of functions
+import IndexConvert
 
+--We represent the board with a 1D array of n*n elements, where n is the size of the puzzle.
+type Board= Vector Int
 
+--A function to find the board size from a given vector
 boardSize :: Board-> Int
 boardSize b = round ( sqrt ( fromIntegral ( Vector.length b ) ) )
 

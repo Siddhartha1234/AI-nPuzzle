@@ -1,5 +1,9 @@
 module BoardIO where
 
+import AStarSearch
+import Data.Vector (Vector, (!), (//))
+import qualified Data.Vector as Vector --Helps in simplified calling of functions
+
 --A function that returns the list of states that the puzzle goes into as we solve it
 boards :: State -> [[Int]]
 boards s = map Vector.toList (reverse (bords s))
@@ -7,11 +11,6 @@ boards s = map Vector.toList (reverse (bords s))
     bords s = case previous s of
       Nothing -> [board s]
       Just r  -> board s : bords r
-
---A function to cretate a list of Int from the input string
-fromString :: String -> [[Int]]
-fromString s = (map . map) read ws
-  where ws = map words (lines s)
 
 --A function to print the solution
 printer :: [[Int]]->IO()
