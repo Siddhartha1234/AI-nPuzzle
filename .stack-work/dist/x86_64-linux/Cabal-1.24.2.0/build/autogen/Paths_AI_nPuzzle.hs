@@ -29,12 +29,12 @@ version :: Version
 version = Version [0,1,0,0] []
 bindir, libdir, dynlibdir, datadir, libexecdir, sysconfdir :: FilePath
 
-bindir     = "/home/sid/Documents/POPL/AI-nPuzzle/.stack-work/install/x86_64-linux/lts-8.9/8.0.2/bin"
-libdir     = "/home/sid/Documents/POPL/AI-nPuzzle/.stack-work/install/x86_64-linux/lts-8.9/8.0.2/lib/x86_64-linux-ghc-8.0.2/AI-nPuzzle-0.1.0.0-G3wrCDuLjfk4CwJfKTrUb4"
-dynlibdir  = "/home/sid/Documents/POPL/AI-nPuzzle/.stack-work/install/x86_64-linux/lts-8.9/8.0.2/lib/x86_64-linux-ghc-8.0.2"
-datadir    = "/home/sid/Documents/POPL/AI-nPuzzle/.stack-work/install/x86_64-linux/lts-8.9/8.0.2/share/x86_64-linux-ghc-8.0.2/AI-nPuzzle-0.1.0.0"
-libexecdir = "/home/sid/Documents/POPL/AI-nPuzzle/.stack-work/install/x86_64-linux/lts-8.9/8.0.2/libexec"
-sysconfdir = "/home/sid/Documents/POPL/AI-nPuzzle/.stack-work/install/x86_64-linux/lts-8.9/8.0.2/etc"
+bindir     = "/home/rahul/Desktop/AI-nPuzzle/.stack-work/install/x86_64-linux/lts-8.9/8.0.2/bin"
+libdir     = "/home/rahul/Desktop/AI-nPuzzle/.stack-work/install/x86_64-linux/lts-8.9/8.0.2/lib/x86_64-linux-ghc-8.0.2/AI-nPuzzle-0.1.0.0-G3wrCDuLjfk4CwJfKTrUb4"
+dynlibdir  = "/home/rahul/Desktop/AI-nPuzzle/.stack-work/install/x86_64-linux/lts-8.9/8.0.2/lib/x86_64-linux-ghc-8.0.2"
+datadir    = "/home/rahul/Desktop/AI-nPuzzle/.stack-work/install/x86_64-linux/lts-8.9/8.0.2/share/x86_64-linux-ghc-8.0.2/AI-nPuzzle-0.1.0.0"
+libexecdir = "/home/rahul/Desktop/AI-nPuzzle/.stack-work/install/x86_64-linux/lts-8.9/8.0.2/libexec"
+sysconfdir = "/home/rahul/Desktop/AI-nPuzzle/.stack-work/install/x86_64-linux/lts-8.9/8.0.2/etc"
 
 getBinDir, getLibDir, getDynLibDir, getDataDir, getLibexecDir, getSysconfDir :: IO FilePath
 getBinDir = catchIO (getEnv "AI_nPuzzle_bindir") (\_ -> return bindir)
