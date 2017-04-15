@@ -11,9 +11,6 @@ import BoardProps
 import BoardIO
 import AStarSearch
 
---We represent the board with a 1D array of n*n elements, where n is the size of the puzzle.
-type Board= Vector Int
-
 type Que = PQ.MinPQueue Int State
 
 --The main game AI. it takes in a state and returns a final state. We can go prev on the final state to get the sequence of steps to solve the input state
@@ -32,8 +29,7 @@ solve s = go (PQ.fromList [(distKey s, s)])
 	        -- do not add it to the queue since it has already been explored.
 	        neighbourStates = case previous state of
 	        	Nothing -> neighbours state
-	        	Just n-> filter (\x -> board x /= board n) (neighbours state)
+	        	Just n-> filter (\x -> numVec x /= numVec n) (neighbours state)
 
 	        keyStateMap = zip [moves q + distKey q | q <- neighbourStates] neighbourStates
 	        que2 = foldr (uncurry PQ.insert) que1 keyStateMap
-

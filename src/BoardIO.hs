@@ -6,11 +6,11 @@ import qualified Data.Vector as Vector --Helps in simplified calling of function
 
 --A function that returns the list of states that the puzzle goes into as we solve it
 boards :: State -> [[Int]]
-boards s = map Vector.toList (reverse (bords s))
+boards s = map Vector.toList (reverse (nVec s))
   where
-    bords s = case previous s of
-      Nothing -> [board s]
-      Just r  -> board s : bords r
+    nVec s = case previous s of
+      Nothing -> [numVec s]
+      Just r  -> numVec s : nVec r
 
 --A function to print the solution
 printer :: [[Int]]->IO()
